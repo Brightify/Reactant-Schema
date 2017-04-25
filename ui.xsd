@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.brightify.org"
-    xmlns="http://www.brightify.org"
+    targetNamespace="http://schema.reactant.tech/ui"
+    xmlns="http://schema.reactant.tech/ui"
     elementFormDefault="qualified"
     vc:minVersion="1.1"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-    xmlns:layout="http://www.brightify.org/layout">
+    xmlns:layout="http://schema.reactant.tech/layout">
 
-    <xs:import namespace="http://www.brightify.org/layout" schemaLocation="Layout.xsd" />
+    <xs:import namespace="http://schema.reactant.tech/layout" schemaLocation="layout.xsd" />
 
     <xs:element name="UI">
         <xs:complexType>
