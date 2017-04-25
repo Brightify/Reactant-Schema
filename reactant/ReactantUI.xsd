@@ -631,7 +631,6 @@
 
     <xs:attributeGroup name="imageStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
-        <xs:attribute name="contentMode" type="contentMode"/>
     </xs:attributeGroup>
 
     <xs:attributeGroup name="textStyleAttributes">
