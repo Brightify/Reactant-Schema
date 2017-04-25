@@ -493,7 +493,7 @@
         <xs:attribute name="isBaselineRelativeArrangement" type="xs:boolean" />
         <xs:attribute name="isLayoutMarginsRelativeArrangement" type="xs:boolean" />
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="datePickerStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="minuteInterval" type="xs:decimal"/>
@@ -519,7 +519,7 @@
         <xs:attribute name="currentPageIndicatorTintColor" type="xs:string"/>
         <xs:attribute name="defersCurrentPageDisplay" type="xs:boolean"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="searchBarStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="text" type="xs:string"/>
@@ -571,7 +571,7 @@
         <xs:attribute name="autorepeat" type="xs:boolean"/>
         <xs:attribute name="wraps" type="xs:boolean"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="switchStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="isOn" type="xs:boolean"/>
@@ -580,7 +580,7 @@
         <xs:attribute name="onImage" type="xs:string"/>
         <xs:attribute name="offImage" type="xs:string"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="tabBarStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="barTintColor" type="color"/>
@@ -592,14 +592,14 @@
         <xs:attribute name="shadowImage" type="xs:string"/>
         <xs:attribute name="selectionIndicatorImage" type="xs:string"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="toolbarStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="barTintColor" type="color"/>
         <xs:attribute name="isTranslucent" type="xs:boolean"/>
         <xs:attribute name="barStyle" type="barStyle"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="visualEffectViewStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="effect" type="xs:string"/>
@@ -611,7 +611,7 @@
         <xs:attribute name="magnification" type="xs:decimal"/>
         <xs:attribute name="allowsBackForwardNavigationGestures" type="xs:boolean"/>
     </xs:attributeGroup>
-    
+
     <xs:attributeGroup name="mapViewStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="mapType" type="xs:boolean"/>
@@ -630,7 +630,6 @@
     </xs:attributeGroup>
 
     <xs:attributeGroup name="imageStyleAttributes">
-        <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attribute name="contentMode" type="contentMode"/>
     </xs:attributeGroup>
