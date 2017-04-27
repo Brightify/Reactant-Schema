@@ -10,7 +10,7 @@
 
     <xs:import namespace="http://schema.reactant.tech/layout" schemaLocation="layout.xsd" />
 
-    <xs:element name="UI">
+    <xs:element name="Component">
         <xs:complexType>
             <xs:choice maxOccurs="unbounded" minOccurs="0">
                 <xs:group ref="ViewGroup"/>
