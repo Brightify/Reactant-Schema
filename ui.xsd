@@ -19,6 +19,7 @@
             <xs:attribute name="type" type="xs:string" use="required"/>
             <xs:attribute name="rootView" type="xs:boolean" default="false"/>
             <xs:attribute name="extend" type="rectEdge" />
+            <xs:attribute name="anonymous" type="xs:boolean" default="false"/>
         </xs:complexType>
     </xs:element>
 
@@ -631,6 +632,33 @@
 
     <xs:attributeGroup name="imageStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
+        <xs:attribute name="image" type="xs:string" />
+        <xs:attribute name="highlightedImage" type="xs:string" />
+        <xs:attribute name="animationRepeatCount" type="xs:integer" />
+        <xs:attribute name="isHighlighted" type="xs:boolean" />
+        <xs:attribute name="adjustsImageWhenAncestorFocused" type="xs:boolean" />
+    </xs:attributeGroup>
+
+    <xs:attributeGroup name="scrollViewStyleAttributes">
+        <xs:attribute name="contentOffset" type="xs:string" />
+        <xs:attribute name="contentSize" type="xs:string" />
+        <xs:attribute name="contentInset" type="xs:string" />
+        <xs:attribute name="isScrollEnabled" type="xs:boolean" />
+        <xs:attribute name="isDirectionalLockEnabled" type="xs:boolean" />
+        <xs:attribute name="isPagingEnabled" type="xs:boolean" />
+        <xs:attribute name="bounces" type="xs:boolean" />
+        <xs:attribute name="alwaysBounceVertical" type="xs:boolean" />
+        <xs:attribute name="alwaysBounceHorizontal" type="xs:boolean" />
+        <xs:attribute name="delaysContentTouches" type="xs:boolean" />
+        <xs:attribute name="decelerationRate" type="xs:decimal" />
+        <xs:attribute name="scrollIndicatorInsets" type="xs:string" />
+        <xs:attribute name="showsHorizontalScrollIndicator" type="xs:boolean" />
+        <xs:attribute name="showsVerticalScrollIndicator" type="xs:boolean" />
+        <xs:attribute name="zoomScale" type="xs:decimal" />
+        <xs:attribute name="maximumZoomScale" type="xs:decimal" />
+        <xs:attribute name="minimumZoomScale" type="xs:decimal" />
+        <xs:attribute name="bouncesZoom" type="xs:boolean" />
+        <xs:attribute name="indicatorStyle" type="scrollViewIndicatorStyle" />
     </xs:attributeGroup>
 
     <xs:attributeGroup name="textStyleAttributes">
@@ -644,23 +672,67 @@
     <xs:attributeGroup name="textFieldStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attributeGroup ref="textStyleAttributes" />
+        <xs:attribute name="text" type="xs:string"/>
+        <xs:attribute name="placeholder" type="xs:string"/>
+        <xs:attribute name="textColor" type="color"/>
+        <xs:attribute name="font" type="xs:string"/>
         <xs:attribute name="textContainerInset" type="xs:string"/>
+        <xs:attribute name="textAlignment" type="textAlignment" />
+        <xs:attribute name="adjustsFontSizeToWidth" type="xs:boolean" />
+        <xs:attribute name="clearsOnBeginEditing" type="xs:boolean" />
+        <xs:attribute name="clearsOnInsertion" type="xs:boolean" />
+        <xs:attribute name="allowsEditingTextAttributes" type="xs:boolean" />
+        <xs:attribute name="background" type="xs:string"/>
+        <xs:attribute name="disabledBackground" type="xs:string"/>
+        <xs:attribute name="minimumFontSize" type="xs:decimal"/>
+        <xs:attribute name="borderStyle" type="textBorderStyle"/>
+        <xs:attribute name="clearButtonMode" type="textFieldViewMode"/>
+        <xs:attribute name="leftViewMode" type="textFieldViewMode"/>
+        <xs:attribute name="rightViewMode" type="textFieldViewMode"/>
     </xs:attributeGroup>
 
     <xs:attributeGroup name="textViewStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
-        <xs:attributeGroup ref="textStyleAttributes" />
+        <xs:attribute name="textColor" type="color"/>
+        <xs:attribute name="text" type="xs:string"/>
+        <xs:attribute name="font" type="xs:string"/>
+        <xs:attribute name="textContainerInset" type="xs:string"/>
+        <xs:attribute name="numberOfLines" type="xs:nonNegativeInteger" />
+        <xs:attribute name="textAlignment" type="textAlignment" />
+        <xs:attribute name="allowsEditingTextAttributes" type="xs:boolean" />
     </xs:attributeGroup>
 
     <xs:attributeGroup name="labelStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attributeGroup ref="textStyleAttributes" />
+        <xs:attribute name="text" type="xs:string"/>
+        <xs:attribute name="highlightedTextColor" type="color"/>
+        <xs:attribute name="isEnabled" type="xs:boolean"/>
+        <xs:attribute name="adjustsFontSizeToFitWidth" type="xs:boolean"/>
+        <xs:attribute name="allowsDefaultTighteningBeforeTruncation" type="xs:boolean"/>
+        <xs:attribute name="isHighlighted" type="xs:boolean"/>
+        <xs:attribute name="minimumScaleFactor" type="xs:decimal"/>
+        <xs:attribute name="shadowOffset" type="xs:string"/>
+        <xs:attribute name="shadowColor" type="color"/>
+        <xs:attribute name="preferredMaxLayoutWidth" type="xs:decimal"/>
+        <xs:attribute name="lineBreakMode" type="lineBreakMode"/>
     </xs:attributeGroup>
 
     <xs:attributeGroup name="buttonStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attributeGroup ref="textStyleAttributes" />
         <xs:attribute name="titleColor" type="color" />
+        <xs:attribute name="backgroundColor" type="color" />
+        <xs:attribute name="titleShadowColor" type="color" />
+        <xs:attribute name="image" type="xs:string" />
+        <xs:attribute name="backgroundImage" type="xs:string" />
+        <xs:attribute name="adjustsImageWhenHighlighted" type="xs:boolean" />
+        <xs:attribute name="adjustsImageWhenDisabled" type="xs:boolean" />
+        <xs:attribute name="showsTouchWhenHighlighted" type="xs:boolean" />
+        <xs:attribute name="reversesTitleShadowWhenHighlighted" type="xs:boolean" />
+        <xs:attribute name="contentEdgeInsets" type="xs:string" />
+        <xs:attribute name="titleEdgeInsets" type="xs:string" />
+        <xs:attribute name="imageEdgeInsets" type="xs:string" />
     </xs:attributeGroup>
 
     <xs:attributeGroup name="activityIndicatorStyleAttributes">
@@ -735,6 +807,43 @@
             <xs:enumeration value="center" />
             <xs:enumeration value="justified" />
             <xs:enumeration value="natural" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="scrollViewIndicatorStyle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="default" />
+            <xs:enumeration value="black" />
+            <xs:enumeration value="white" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="lineBreakMode">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="byWordWrapping" />
+            <xs:enumeration value="byCharWrapping" />
+            <xs:enumeration value="byClipping" />
+            <xs:enumeration value="byTruncatingHead" />
+            <xs:enumeration value="byTruncatingTail" />
+            <xs:enumeration value="byTruncatingMiddle" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textBorderStyle">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="line" />
+            <xs:enumeration value="bezel" />
+            <xs:enumeration value="none" />
+            <xs:enumeration value="roundedRect" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="textFieldViewMode">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="never" />
+            <xs:enumeration value="whileEditing" />
+            <xs:enumeration value="unlessEditing" />
+            <xs:enumeration value="always" />
         </xs:restriction>
     </xs:simpleType>
 
