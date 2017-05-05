@@ -668,10 +668,7 @@
         <xs:attributeGroup ref="textStyleAttributes" />
         <xs:attribute name="text" type="xs:string"/>
         <xs:attribute name="placeholder" type="xs:string"/>
-        <xs:attribute name="textColor" type="color"/>
-        <xs:attribute name="font" type="xs:string"/>
         <xs:attribute name="textContainerInset" type="xs:string"/>
-        <xs:attribute name="textAlignment" type="textAlignment" />
         <xs:attribute name="adjustsFontSizeToWidth" type="xs:boolean" />
         <xs:attribute name="clearsOnBeginEditing" type="xs:boolean" />
         <xs:attribute name="clearsOnInsertion" type="xs:boolean" />
@@ -717,7 +714,6 @@
         <xs:attributeGroup ref="textStyleAttributes" />
         <xs:attribute name="title" type="xs:string" />
         <xs:attribute name="titleColor" type="color" />
-        <xs:attribute name="backgroundColor" type="color" />
         <xs:attribute name="titleShadowColor" type="color" />
         <xs:attribute name="image" type="xs:string" />
         <xs:attribute name="backgroundImage" type="xs:string" />
