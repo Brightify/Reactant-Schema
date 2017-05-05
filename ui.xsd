@@ -32,7 +32,6 @@
                     <xs:complexContent>
                         <xs:extension base="viewType">
                             <xs:attributeGroup ref="imageStyleAttributes" />
-                            <xs:attribute name="image" type="xs:string"/>
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -92,7 +91,6 @@
                     <xs:complexContent>
                         <xs:extension base="viewType">
                             <xs:attributeGroup ref="labelStyleAttributes" />
-                            <xs:attribute name="text" type="xs:string"/>
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -103,8 +101,6 @@
                     <xs:complexContent>
                         <xs:extension base="viewType">
                             <xs:attributeGroup ref="textFieldStyleAttributes" />
-                            <xs:attribute name="text" type="xs:string"/>
-                            <xs:attribute name="placeholder" type="xs:string" />
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -115,7 +111,6 @@
                     <xs:complexContent>
                         <xs:extension base="viewType">
                             <xs:attributeGroup ref="textViewStyleAttributes" />
-                            <xs:attribute name="text" type="xs:string"/>
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -126,7 +121,6 @@
                     <xs:complexContent>
                         <xs:extension base="viewType">
                             <xs:attributeGroup ref="buttonStyleAttributes" />
-                            <xs:attribute name="title" type="xs:string" />
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -721,6 +715,7 @@
     <xs:attributeGroup name="buttonStyleAttributes">
         <xs:attributeGroup ref="viewStyleAttributes" />
         <xs:attributeGroup ref="textStyleAttributes" />
+        <xs:attribute name="title" type="xs:string" />
         <xs:attribute name="titleColor" type="color" />
         <xs:attribute name="backgroundColor" type="color" />
         <xs:attribute name="titleShadowColor" type="color" />
