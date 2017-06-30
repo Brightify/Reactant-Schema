@@ -16,7 +16,8 @@
                 <xs:group ref="ViewGroup"/>
                 <xs:element name="styles" minOccurs="0" maxOccurs="1" type="stylesType" />
             </xs:choice>
-            <xs:attribute name="type" type="xs:string" use="required"/>
+
+            <xs:attribute name="type" type="xs:string"/>
             <xs:attribute name="rootView" type="xs:boolean" default="false"/>
             <xs:attribute name="extend" type="rectEdge" />
             <xs:attribute name="anonymous" type="xs:boolean" default="false"/>
@@ -41,9 +42,6 @@
                 <xs:complexType>
                     <xs:complexContent>
                         <xs:extension base="viewType">
-                            <xs:choice maxOccurs="unbounded" minOccurs="0">
-                                <xs:group ref="ViewGroup"/>
-                            </xs:choice>
                         </xs:extension>
                     </xs:complexContent>
                 </xs:complexType>
@@ -128,8 +126,13 @@
 
             <xs:element name="Component" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
+                    <xs:attribute name="field" type="xs:string"/>
                     <xs:attribute name="type" type="xs:string" />
                     <xs:attributeGroup ref="layout:layoutAttributes" />
+                    <xs:complexContent>
+                        <xs:extension base="viewType">
+                        </xs:extension>
+                    </xs:complexContent>
                 </xs:complexType>
             </xs:element>
 
@@ -428,6 +431,7 @@
     </xs:attributeGroup>
 
     <xs:attributeGroup name="viewStyleAttributes">
+        <xs:attributeGroup ref="layerStyleAttributes" />
         <xs:attribute name="backgroundColor" type="color"/>
         <xs:attribute name="clipsToBounds" type="xs:boolean"/>
         <xs:attribute name="isUserInteractionEnabled" type="xs:boolean"/>

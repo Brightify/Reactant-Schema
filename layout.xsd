@@ -18,6 +18,7 @@
         <xs:attribute name="bottom" type="constraint" />
         <xs:attribute name="width" type="constraint" />
         <xs:attribute name="height" type="constraint" />
+        <xs:attribute name="size" type="constraint" />
         <xs:attribute name="before" type="constraint" />
         <xs:attribute name="after" type="constraint" />
         <xs:attribute name="above" type="constraint" />
