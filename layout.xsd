@@ -28,6 +28,7 @@
         <xs:attribute name="firstBaseline" type="constraint" />
         <xs:attribute name="lastBaseline" type="constraint" />
         <xs:attribute name="edges" type="constraint" />
+        <xs:attribute name="size" type="constraint" />
         <xs:attribute name="fillHorizontally" type="constraint" />
         <xs:attribute name="fillVertically" type="constraint" />
         <xs:attribute name="compressionPriority" type="constraint" />
